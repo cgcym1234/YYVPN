@@ -1,0 +1,857 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2881883324F36A4B00999481 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881883224F36A4B00999481 /* AppDelegate.swift */; };
+		2881883524F36A4B00999481 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881883424F36A4B00999481 /* SceneDelegate.swift */; };
+		2881883924F36A4D00999481 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2881883824F36A4D00999481 /* Assets.xcassets */; };
+		2881883C24F36A4D00999481 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2881883B24F36A4D00999481 /* Preview Assets.xcassets */; };
+		2881883F24F36A4D00999481 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2881883D24F36A4D00999481 /* LaunchScreen.storyboard */; };
+		2881885624F36B0A00999481 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881885524F36B0A00999481 /* PacketTunnelProvider.swift */; };
+		2881885B24F36B0A00999481 /* Tunnel.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2881885324F36B0900999481 /* Tunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2881886724F36B2400999481 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881886624F36B2400999481 /* AppDelegate.swift */; };
+		2881886924F36B2400999481 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881886824F36B2400999481 /* ContentView.swift */; };
+		2881886B24F36B2400999481 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2881886A24F36B2400999481 /* Assets.xcassets */; };
+		2881886E24F36B2400999481 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2881886D24F36B2400999481 /* Preview Assets.xcassets */; };
+		2881887124F36B2400999481 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2881886F24F36B2400999481 /* Main.storyboard */; };
+		2881887924F3BDC900999481 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2881887824F3BDC900999481 /* NetworkExtension.framework */; };
+		2881887B24F3BDD700999481 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2881887824F3BDC900999481 /* NetworkExtension.framework */; };
+		2881887E24F3C2B500999481 /* YYVPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881887D24F3C2B500999481 /* YYVPNManager.swift */; };
+		2881888024F3C54000999481 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881887F24F3C54000999481 /* ConfigView.swift */; };
+		2881888224F3CAA800999481 /* ConfigViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881888124F3CAA800999481 /* ConfigViewModel.swift */; };
+		2881888424F3CD1100999481 /* YYVPNManager.Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881888324F3CD1100999481 /* YYVPNManager.Config.swift */; };
+		2881888824F4FC2D00999481 /* YYVPNManager.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881888724F4FC2D00999481 /* YYVPNManager.Extension.swift */; };
+		2881888924F516DA00999481 /* libYYVPNLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2881884824F36AAC00999481 /* libYYVPNLib.a */; };
+		288188EC24F65F6C00999481 /* YYAlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288188EB24F65F6C00999481 /* YYAlertButton.swift */; };
+		28C8601724F66CD0000EC2B6 /* libYYVPNLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2881884824F36AAC00999481 /* libYYVPNLib.a */; };
+		28C8601C24F7AA42000EC2B6 /* View+YYLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C8601B24F7AA42000EC2B6 /* View+YYLib.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2881885924F36B0A00999481 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2881880D24F369E000999481 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2881885224F36B0900999481;
+			remoteInfo = Tunnel;
+		};
+		2881888A24F516DA00999481 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2881880D24F369E000999481 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2881884724F36AAC00999481;
+			remoteInfo = YYVPNLib;
+		};
+		28C8601824F66CD0000EC2B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2881880D24F369E000999481 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2881884724F36AAC00999481;
+			remoteInfo = YYVPNLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2881884624F36AAC00999481 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2881885F24F36B0A00999481 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2881885B24F36B0A00999481 /* Tunnel.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2881883024F36A4B00999481 /* Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Client.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2881883224F36A4B00999481 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2881883424F36A4B00999481 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2881883824F36A4D00999481 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2881883B24F36A4D00999481 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2881883E24F36A4D00999481 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2881884024F36A4D00999481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2881884824F36AAC00999481 /* libYYVPNLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYYVPNLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2881885324F36B0900999481 /* Tunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Tunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2881885524F36B0A00999481 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		2881885724F36B0A00999481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2881885824F36B0A00999481 /* Tunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tunnel.entitlements; sourceTree = "<group>"; };
+		2881886424F36B2400999481 /* Server.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Server.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2881886624F36B2400999481 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2881886824F36B2400999481 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2881886A24F36B2400999481 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2881886D24F36B2400999481 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2881887024F36B2400999481 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2881887224F36B2400999481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2881887324F36B2400999481 /* Server.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Server.entitlements; sourceTree = "<group>"; };
+		2881887824F3BDC900999481 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		2881887A24F3BDD700999481 /* Client.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Client.entitlements; sourceTree = "<group>"; };
+		2881887D24F3C2B500999481 /* YYVPNManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYVPNManager.swift; sourceTree = "<group>"; };
+		2881887F24F3C54000999481 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
+		2881888124F3CAA800999481 /* ConfigViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewModel.swift; sourceTree = "<group>"; };
+		2881888324F3CD1100999481 /* YYVPNManager.Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYVPNManager.Config.swift; sourceTree = "<group>"; };
+		2881888724F4FC2D00999481 /* YYVPNManager.Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYVPNManager.Extension.swift; sourceTree = "<group>"; };
+		288188EB24F65F6C00999481 /* YYAlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAlertButton.swift; sourceTree = "<group>"; };
+		28C8601B24F7AA42000EC2B6 /* View+YYLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+YYLib.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2881882D24F36A4B00999481 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2881888924F516DA00999481 /* libYYVPNLib.a in Frameworks */,
+				2881887B24F3BDD700999481 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2881884524F36AAC00999481 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2881885024F36B0900999481 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28C8601724F66CD0000EC2B6 /* libYYVPNLib.a in Frameworks */,
+				2881887924F3BDC900999481 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2881886124F36B2400999481 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2881880C24F369E000999481 = {
+			isa = PBXGroup;
+			children = (
+				2881884924F36AAC00999481 /* YYVPNLib */,
+				2881883124F36A4B00999481 /* Client */,
+				2881885424F36B0A00999481 /* Tunnel */,
+				2881886524F36B2400999481 /* Server */,
+				2881881624F369E000999481 /* Products */,
+				2881887724F3BDC900999481 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2881881624F369E000999481 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2881883024F36A4B00999481 /* Client.app */,
+				2881884824F36AAC00999481 /* libYYVPNLib.a */,
+				2881885324F36B0900999481 /* Tunnel.appex */,
+				2881886424F36B2400999481 /* Server.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2881883124F36A4B00999481 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				2881887A24F3BDD700999481 /* Client.entitlements */,
+				2881883224F36A4B00999481 /* AppDelegate.swift */,
+				2881883424F36A4B00999481 /* SceneDelegate.swift */,
+				28C8601A24F7AA1C000EC2B6 /* Service */,
+				288188EF24F6637500999481 /* Module */,
+				2881883824F36A4D00999481 /* Assets.xcassets */,
+				2881883D24F36A4D00999481 /* LaunchScreen.storyboard */,
+				2881884024F36A4D00999481 /* Info.plist */,
+				2881883A24F36A4D00999481 /* Preview Content */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		2881883A24F36A4D00999481 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2881883B24F36A4D00999481 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2881884924F36AAC00999481 /* YYVPNLib */ = {
+			isa = PBXGroup;
+			children = (
+				2881887D24F3C2B500999481 /* YYVPNManager.swift */,
+				2881888324F3CD1100999481 /* YYVPNManager.Config.swift */,
+				2881888724F4FC2D00999481 /* YYVPNManager.Extension.swift */,
+			);
+			path = YYVPNLib;
+			sourceTree = "<group>";
+		};
+		2881885424F36B0A00999481 /* Tunnel */ = {
+			isa = PBXGroup;
+			children = (
+				2881885524F36B0A00999481 /* PacketTunnelProvider.swift */,
+				2881885724F36B0A00999481 /* Info.plist */,
+				2881885824F36B0A00999481 /* Tunnel.entitlements */,
+			);
+			path = Tunnel;
+			sourceTree = "<group>";
+		};
+		2881886524F36B2400999481 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				2881886624F36B2400999481 /* AppDelegate.swift */,
+				2881886824F36B2400999481 /* ContentView.swift */,
+				2881886A24F36B2400999481 /* Assets.xcassets */,
+				2881886F24F36B2400999481 /* Main.storyboard */,
+				2881887224F36B2400999481 /* Info.plist */,
+				2881887324F36B2400999481 /* Server.entitlements */,
+				2881886C24F36B2400999481 /* Preview Content */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		2881886C24F36B2400999481 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2881886D24F36B2400999481 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2881887724F3BDC900999481 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2881887824F3BDC900999481 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		288188ED24F6633D00999481 /* ConfigView */ = {
+			isa = PBXGroup;
+			children = (
+				2881887F24F3C54000999481 /* ConfigView.swift */,
+				2881888124F3CAA800999481 /* ConfigViewModel.swift */,
+			);
+			path = ConfigView;
+			sourceTree = "<group>";
+		};
+		288188EE24F6635900999481 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				288188EB24F65F6C00999481 /* YYAlertButton.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		288188EF24F6637500999481 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				288188ED24F6633D00999481 /* ConfigView */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		28C8601A24F7AA1C000EC2B6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				288188EE24F6635900999481 /* Component */,
+				28C8601B24F7AA42000EC2B6 /* View+YYLib.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2881882F24F36A4B00999481 /* Client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2881884124F36A4D00999481 /* Build configuration list for PBXNativeTarget "Client" */;
+			buildPhases = (
+				2881882C24F36A4B00999481 /* Sources */,
+				2881882D24F36A4B00999481 /* Frameworks */,
+				2881882E24F36A4B00999481 /* Resources */,
+				2881885F24F36B0A00999481 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2881885A24F36B0A00999481 /* PBXTargetDependency */,
+				2881888B24F516DA00999481 /* PBXTargetDependency */,
+			);
+			name = Client;
+			productName = Client;
+			productReference = 2881883024F36A4B00999481 /* Client.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2881884724F36AAC00999481 /* YYVPNLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2881884C24F36AAC00999481 /* Build configuration list for PBXNativeTarget "YYVPNLib" */;
+			buildPhases = (
+				2881884424F36AAC00999481 /* Sources */,
+				2881884524F36AAC00999481 /* Frameworks */,
+				2881884624F36AAC00999481 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YYVPNLib;
+			productName = YYVPNLib;
+			productReference = 2881884824F36AAC00999481 /* libYYVPNLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2881885224F36B0900999481 /* Tunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2881885C24F36B0A00999481 /* Build configuration list for PBXNativeTarget "Tunnel" */;
+			buildPhases = (
+				2881884F24F36B0900999481 /* Sources */,
+				2881885024F36B0900999481 /* Frameworks */,
+				2881885124F36B0900999481 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28C8601924F66CD0000EC2B6 /* PBXTargetDependency */,
+			);
+			name = Tunnel;
+			productName = Tunnel;
+			productReference = 2881885324F36B0900999481 /* Tunnel.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		2881886324F36B2400999481 /* Server */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2881887424F36B2400999481 /* Build configuration list for PBXNativeTarget "Server" */;
+			buildPhases = (
+				2881886024F36B2400999481 /* Sources */,
+				2881886124F36B2400999481 /* Frameworks */,
+				2881886224F36B2400999481 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Server;
+			productName = Server;
+			productReference = 2881886424F36B2400999481 /* Server.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2881880D24F369E000999481 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = yuany;
+				TargetAttributes = {
+					2881882F24F36A4B00999481 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					2881884724F36AAC00999481 = {
+						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
+					};
+					2881885224F36B0900999481 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					2881886324F36B2400999481 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = 2881881024F369E000999481 /* Build configuration list for PBXProject "YYVPN" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2881880C24F369E000999481;
+			productRefGroup = 2881881624F369E000999481 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2881884724F36AAC00999481 /* YYVPNLib */,
+				2881882F24F36A4B00999481 /* Client */,
+				2881885224F36B0900999481 /* Tunnel */,
+				2881886324F36B2400999481 /* Server */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2881882E24F36A4B00999481 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2881883F24F36A4D00999481 /* LaunchScreen.storyboard in Resources */,
+				2881883C24F36A4D00999481 /* Preview Assets.xcassets in Resources */,
+				2881883924F36A4D00999481 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2881885124F36B0900999481 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2881886224F36B2400999481 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2881887124F36B2400999481 /* Main.storyboard in Resources */,
+				2881886E24F36B2400999481 /* Preview Assets.xcassets in Resources */,
+				2881886B24F36B2400999481 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2881882C24F36A4B00999481 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2881888024F3C54000999481 /* ConfigView.swift in Sources */,
+				2881888224F3CAA800999481 /* ConfigViewModel.swift in Sources */,
+				28C8601C24F7AA42000EC2B6 /* View+YYLib.swift in Sources */,
+				288188EC24F65F6C00999481 /* YYAlertButton.swift in Sources */,
+				2881883324F36A4B00999481 /* AppDelegate.swift in Sources */,
+				2881883524F36A4B00999481 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2881884424F36AAC00999481 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2881887E24F3C2B500999481 /* YYVPNManager.swift in Sources */,
+				2881888824F4FC2D00999481 /* YYVPNManager.Extension.swift in Sources */,
+				2881888424F3CD1100999481 /* YYVPNManager.Config.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2881884F24F36B0900999481 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2881885624F36B0A00999481 /* PacketTunnelProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2881886024F36B2400999481 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2881886924F36B2400999481 /* ContentView.swift in Sources */,
+				2881886724F36B2400999481 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2881885A24F36B0A00999481 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2881885224F36B0900999481 /* Tunnel */;
+			targetProxy = 2881885924F36B0A00999481 /* PBXContainerItemProxy */;
+		};
+		2881888B24F516DA00999481 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2881884724F36AAC00999481 /* YYVPNLib */;
+			targetProxy = 2881888A24F516DA00999481 /* PBXContainerItemProxy */;
+		};
+		28C8601924F66CD0000EC2B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2881884724F36AAC00999481 /* YYVPNLib */;
+			targetProxy = 28C8601824F66CD0000EC2B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2881883D24F36A4D00999481 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2881883E24F36A4D00999481 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2881886F24F36B2400999481 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2881887024F36B2400999481 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2881882724F369E200999481 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2881882824F369E200999481 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2881884224F36A4D00999481 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Client/Client.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Client/Preview Content\"";
+				DEVELOPMENT_TEAM = 5PK7JV6E62;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Client/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yy.Client;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2881884324F36A4D00999481 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Client/Client.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Client/Preview Content\"";
+				DEVELOPMENT_TEAM = 5PK7JV6E62;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Client/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yy.Client;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2881884D24F36AAC00999481 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5PK7JV6E62;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2881884E24F36AAC00999481 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5PK7JV6E62;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2881885D24F36B0A00999481 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Tunnel/Tunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5PK7JV6E62;
+				INFOPLIST_FILE = Tunnel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yy.Client.Tunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2881885E24F36B0A00999481 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Tunnel/Tunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5PK7JV6E62;
+				INFOPLIST_FILE = Tunnel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yy.Client.Tunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2881887524F36B2400999481 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Server/Server.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Server/Preview Content\"";
+				DEVELOPMENT_TEAM = 5PK7JV6E62;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Server/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yy.Server;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2881887624F36B2400999481 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Server/Server.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Server/Preview Content\"";
+				DEVELOPMENT_TEAM = 5PK7JV6E62;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Server/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yy.Server;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2881881024F369E000999481 /* Build configuration list for PBXProject "YYVPN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2881882724F369E200999481 /* Debug */,
+				2881882824F369E200999481 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2881884124F36A4D00999481 /* Build configuration list for PBXNativeTarget "Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2881884224F36A4D00999481 /* Debug */,
+				2881884324F36A4D00999481 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2881884C24F36AAC00999481 /* Build configuration list for PBXNativeTarget "YYVPNLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2881884D24F36AAC00999481 /* Debug */,
+				2881884E24F36AAC00999481 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2881885C24F36B0A00999481 /* Build configuration list for PBXNativeTarget "Tunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2881885D24F36B0A00999481 /* Debug */,
+				2881885E24F36B0A00999481 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2881887424F36B2400999481 /* Build configuration list for PBXNativeTarget "Server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2881887524F36B2400999481 /* Debug */,
+				2881887624F36B2400999481 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2881880D24F369E000999481 /* Project object */;
+}
