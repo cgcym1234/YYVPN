@@ -30,6 +30,10 @@
 		288188EC24F65F6C00999481 /* YYAlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288188EB24F65F6C00999481 /* YYAlertButton.swift */; };
 		28C8601724F66CD0000EC2B6 /* libYYVPNLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2881884824F36AAC00999481 /* libYYVPNLib.a */; };
 		28C8601C24F7AA42000EC2B6 /* View+YYLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C8601B24F7AA42000EC2B6 /* View+YYLib.swift */; };
+		28C8603A24F8F994000EC2B6 /* udp_server.c in Sources */ = {isa = PBXBuildFile; fileRef = 28C8603624F8F994000EC2B6 /* udp_server.c */; };
+		28C8603B24F8F994000EC2B6 /* udp_client.c in Sources */ = {isa = PBXBuildFile; fileRef = 28C8603724F8F994000EC2B6 /* udp_client.c */; };
+		28C8603C24F8F994000EC2B6 /* YYServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C8603824F8F994000EC2B6 /* YYServer.m */; };
+		28C8603E24F8F9FD000EC2B6 /* YYListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C8603D24F8F9FD000EC2B6 /* YYListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +113,14 @@
 		2881888724F4FC2D00999481 /* YYVPNManager.Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYVPNManager.Extension.swift; sourceTree = "<group>"; };
 		288188EB24F65F6C00999481 /* YYAlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAlertButton.swift; sourceTree = "<group>"; };
 		28C8601B24F7AA42000EC2B6 /* View+YYLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+YYLib.swift"; sourceTree = "<group>"; };
+		28C8602D24F8F96F000EC2B6 /* Server-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Server-Bridging-Header.h"; sourceTree = "<group>"; };
+		28C8603424F8F994000EC2B6 /* YYServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYServer.h; sourceTree = "<group>"; };
+		28C8603524F8F994000EC2B6 /* udp_client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = udp_client.h; sourceTree = "<group>"; };
+		28C8603624F8F994000EC2B6 /* udp_server.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = udp_server.c; sourceTree = "<group>"; };
+		28C8603724F8F994000EC2B6 /* udp_client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = udp_client.c; sourceTree = "<group>"; };
+		28C8603824F8F994000EC2B6 /* YYServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYServer.m; sourceTree = "<group>"; };
+		28C8603924F8F994000EC2B6 /* udp_server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = udp_server.h; sourceTree = "<group>"; };
+		28C8603D24F8F9FD000EC2B6 /* YYListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +231,9 @@
 			children = (
 				2881886624F36B2400999481 /* AppDelegate.swift */,
 				2881886824F36B2400999481 /* ContentView.swift */,
+				28C8603D24F8F9FD000EC2B6 /* YYListView.swift */,
+				28C8602D24F8F96F000EC2B6 /* Server-Bridging-Header.h */,
+				28C8603324F8F994000EC2B6 /* Server */,
 				2881886A24F36B2400999481 /* Assets.xcassets */,
 				2881886F24F36B2400999481 /* Main.storyboard */,
 				2881887224F36B2400999481 /* Info.plist */,
@@ -276,6 +291,19 @@
 				28C8601B24F7AA42000EC2B6 /* View+YYLib.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		28C8603324F8F994000EC2B6 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				28C8603724F8F994000EC2B6 /* udp_client.c */,
+				28C8603524F8F994000EC2B6 /* udp_client.h */,
+				28C8603624F8F994000EC2B6 /* udp_server.c */,
+				28C8603924F8F994000EC2B6 /* udp_server.h */,
+				28C8603424F8F994000EC2B6 /* YYServer.h */,
+				28C8603824F8F994000EC2B6 /* YYServer.m */,
+			);
+			path = Server;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +403,7 @@
 					};
 					2881886324F36B2400999481 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 				};
 			};
@@ -465,8 +494,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28C8603B24F8F994000EC2B6 /* udp_client.c in Sources */,
+				28C8603A24F8F994000EC2B6 /* udp_server.c in Sources */,
 				2881886924F36B2400999481 /* ContentView.swift in Sources */,
 				2881886724F36B2400999481 /* AppDelegate.swift in Sources */,
+				28C8603E24F8F9FD000EC2B6 /* YYListView.swift in Sources */,
+				28C8603C24F8F994000EC2B6 /* YYServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,6 +792,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Server/Server.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -775,6 +809,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yy.Server;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Server/Server-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -783,6 +819,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Server/Server.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -799,6 +836,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yy.Server;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Server/Server-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

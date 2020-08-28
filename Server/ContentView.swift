@@ -9,12 +9,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var items: [YYListView.Model] = []
+
     var body: some View {
-        Text("Hello, World!")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        VStack {
+            HStack {
+                Text("接收数据中...")
+                Button(action: clean) {
+                    Text("clean")
+                }
+            }.fixedSize()
+            YYListView(items: $items)
+        }.onAppear(perform: starServer)
+    }
+
+    private func clean() {
+        items.removeAll()
+    }
+
+    private func starServer() {
+        YYServer.startUDPServer(8899) { str in
+            self.items.append(.init(text: str))
+        }
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
