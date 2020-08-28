@@ -14,7 +14,10 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
     private var pendingCompletion: ((Error?) -> Void)?
     private var config: YYVPNManager.Config!
     private var udpSession: NWUDPSession!
+    private var observer: AnyObject?
     
+    /// 启动网络隧道，当主App调用startVPNTunnel()后执行；
+    /// 最后通过调用completionHandler(nil or error)，完成建立隧道或由于错误而无法启动隧道。
     override func startTunnel(options: [String: NSObject]?, completionHandler: @escaping (Error?) -> Void) {
         os_log(.default, log: .default, "Starting tunnel, options: %{public}@", "\(String(describing: options))")
         do {
@@ -31,14 +34,19 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         
         pendingCompletion = completionHandler
         setupUDPSession()
-        localPacketsToServer()
     }
     
+    /// 停止网络隧道，当主App调用stopVPNTunnel()或其他原因停止网络隧道时候执行；
+    /// 如果想在PacketTunnelProvider内部停止，不能调用这个方法，应该调用cancelTunnelWithError()。
     override func stopTunnel(with reason: NEProviderStopReason, completionHandler: @escaping () -> Void) {
         // Add code here to start the process of stopping the tunnel.
         completionHandler()
     }
     
+    /// 处理主App发送过来的消息，
+    /// 主App可以通过`let session = manager.connection as? NETunnelProviderSession`，
+    /// 再调用`session.sendProviderMessage(_ messageData: Data, responseHandler:)`向tunnel发送数据，
+    /// tunnel回调completionHandler返回数据。
     override func handleAppMessage(_ messageData: Data, completionHandler: ((Data?) -> Void)?) {
         // Add code here to handle the message.
         if let handler = completionHandler {
@@ -46,11 +54,13 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         }
     }
     
+    /// 当设备即将进入睡眠状态时，系统会调用此方法。
     override func sleep(completionHandler: @escaping () -> Void) {
         // Add code here to get ready to sleep.
         completionHandler()
     }
     
+    /// 当设备从睡眠模式唤醒时，系统会调用此方法。
     override func wake() {
         // Add code here to wake up.
     }
@@ -60,9 +70,26 @@ private extension PacketTunnelProvider {
     func setupUDPSession() {
         let endPoint = NWHostEndpoint(hostname: config.hostname, port: config.port)
         udpSession = createUDPSession(to: endPoint, from: nil)
-        setupTunnelNetworkSettings()
+        observer = udpSession.observe(\.state, options: [.new]) { [weak self] session, _ in
+            self?.udpSession(session, didUpdateState: session.state)
+        }
     }
     
+    func udpSession(_ session: NWUDPSession, didUpdateState state: NWUDPSessionState) {
+        switch state {
+        case .ready:
+            setupTunnelNetworkSettings()
+            localPacketsToServer()
+        case .failed:
+            os_log(.default, log: .default, "Connet UDP Server failed")
+            pendingCompletion?(NEVPNError(.connectionFailed))
+            pendingCompletion = nil
+        default:
+            break
+        }
+    }
+    
+    /// 给虚拟网卡配置虚拟IP，DNS设置，代理设置，隧道MTU和IP路由
     func setupTunnelNetworkSettings() {
         let ip = "192.168.0.2"
         let subnet = "255.255.255.0"

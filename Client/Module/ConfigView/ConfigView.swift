@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import YYVPNLib
 
 struct ConfigView: View {
     @ObservedObject var viewModel =
