@@ -9,6 +9,12 @@
 import Foundation
 import NetworkExtension
 
+extension YYVPNManager {
+    public static let groupID = "group.com.yy.Client"
+    public static let bundleID = "com.yy.Client"
+    public static let bundleIDTunnel = "com.yy.Client.Tunnel"
+}
+
 public final class YYVPNManager {
     public typealias Handler = (Error?) -> Void
 
@@ -127,7 +133,7 @@ private extension YYVPNManager {
     func makeTunnelManager(with config: Config) -> NETunnelProviderManager {
         let manager = NETunnelProviderManager()
         let proto = NETunnelProviderProtocol()
-        proto.providerBundleIdentifier = config.bundleIDTunnel
+        proto.providerBundleIdentifier = YYVPNManager.bundleIDTunnel
         proto.serverAddress = "YYVPN"
         /// passwordReference必须取keychain里面的值
 //        proto.passwordReference = Data()

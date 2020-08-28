@@ -51,7 +51,7 @@ void handle_udp_datagram(int fd) {
         /// recvfrom和sendto都可以用于TCP，尽管通常没有理由这样做。
         count = recvfrom(fd, buf, BUFF_LEN, 0, (struct sockaddr *)&client, &len);
         if (count == ANET_ERR) {
-            printf("recieve data failed:[%s]", strerror(errno));
+            printf("recieve data failed:[%s]\n", strerror(errno));
             return;
         }
         
@@ -62,11 +62,6 @@ void handle_udp_datagram(int fd) {
             datahandler(buf, count);
         }
         
-//        bzero(buf, sizeof(buf));
-        ///回复client
-//        sprintf(buf, "I have recieved %ld bytes data!\n", count);
-//        printf("server:%s\n",buf);
-        //发送信息给client，注意使用了clent_addr结构体指针
         sendto(fd, buf, count, 0, (struct sockaddr*)&client, len);
     }
 }
@@ -75,7 +70,7 @@ static int upd_server(int port) {
     ///AF_INET:IPV4;SOCK_DGRAM:UDP
     int fd = socket(AF_INET, SOCK_DGRAM, 0);
     if (fd < 0) {
-        printf("creating socket failed:[%s]", strerror(errno));
+        printf("creating socket failed:[%s]\n", strerror(errno));
         return ANET_ERR;
     }
     
@@ -88,7 +83,8 @@ static int upd_server(int port) {
     
     int ret = bind(fd, (struct sockaddr *)&sa, sizeof(sa));
     if (ret < 0) {
-        printf("bind failed:[%s]", strerror(errno));
+        printf("bind failed:[%s]\n", strerror(errno));
+        close(fd);
         return ANET_ERR;
     }
     
@@ -97,8 +93,10 @@ static int upd_server(int port) {
 
 void udp_server_start(int port) {
     int fd = upd_server(port);
-    handle_udp_datagram(fd);
-    close(fd);
+    if (fd > 0) {
+        handle_udp_datagram(fd);
+        close(fd);
+    }
 }
 
 

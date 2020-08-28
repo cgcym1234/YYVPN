@@ -39,10 +39,6 @@ public extension YYVPNManager {
 
 extension YYVPNManager {
     public struct Config {
-        public let groupID = "group.com.yy.Client"
-        public let bundleID = "com.yy.Client"
-        public let bundleIDTunnel = "com.yy.Client.Tunnel"
-        
         public var username: String = ""
         public var password: String = ""
         public var hostname: String

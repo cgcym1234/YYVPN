@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ConfigView: View {
+    
     @ObservedObject var viewModel =
         ConfigViewModel(config: .init(hostname: "172.20.49.36", port: "8899"))
 
