@@ -49,6 +49,14 @@ struct ConfigView: View {
                         }
                     }
                 }
+                
+                if viewModel.status == .on {
+                    Section {
+                        NavigationLink(destination: PacketView()) {
+                            Text("Show packets View")
+                        }
+                    }
+                }
 
                 Section {
                     YYAlertButton(text: "Remove",

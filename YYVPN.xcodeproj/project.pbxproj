@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2860C44024FC9D470059B261 /* YYDarwinNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2860C43E24FC9D470059B261 /* YYDarwinNotificationManager.m */; };
+		2860C44224FC9E570059B261 /* YYVPNManager.Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2860C44124FC9E570059B261 /* YYVPNManager.Notification.swift */; };
+		2860C44A24FCC7EB0059B261 /* PacketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2860C44924FCC7EB0059B261 /* PacketView.swift */; };
+		2860C44C24FCC8A40059B261 /* YYListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2860C44B24FCC8A40059B261 /* YYListView.swift */; };
 		2881883324F36A4B00999481 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881883224F36A4B00999481 /* AppDelegate.swift */; };
 		2881883524F36A4B00999481 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2881883424F36A4B00999481 /* SceneDelegate.swift */; };
 		2881883924F36A4D00999481 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2881883824F36A4D00999481 /* Assets.xcassets */; };
@@ -84,6 +88,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2860C43E24FC9D470059B261 /* YYDarwinNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDarwinNotificationManager.m; sourceTree = "<group>"; };
+		2860C43F24FC9D470059B261 /* YYDarwinNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDarwinNotificationManager.h; sourceTree = "<group>"; };
+		2860C44124FC9E570059B261 /* YYVPNManager.Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYVPNManager.Notification.swift; sourceTree = "<group>"; };
+		2860C44324FCAA440059B261 /* Tunnel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tunnel-Bridging-Header.h"; sourceTree = "<group>"; };
+		2860C44924FCC7EB0059B261 /* PacketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketView.swift; sourceTree = "<group>"; };
+		2860C44B24FCC8A40059B261 /* YYListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYListView.swift; sourceTree = "<group>"; };
+		2860C44D24FCC8CF0059B261 /* Client-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Client-Bridging-Header.h"; sourceTree = "<group>"; };
 		2881883024F36A4B00999481 /* Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Client.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2881883224F36A4B00999481 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2881883424F36A4B00999481 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +170,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2860C45224FCC9000059B261 /* PacketView */ = {
+			isa = PBXGroup;
+			children = (
+				2860C44924FCC7EB0059B261 /* PacketView.swift */,
+			);
+			path = PacketView;
+			sourceTree = "<group>";
+		};
 		2881880C24F369E000999481 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +213,7 @@
 				2881883D24F36A4D00999481 /* LaunchScreen.storyboard */,
 				2881884024F36A4D00999481 /* Info.plist */,
 				2881883A24F36A4D00999481 /* Preview Content */,
+				2860C44D24FCC8CF0059B261 /* Client-Bridging-Header.h */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -211,7 +231,10 @@
 			children = (
 				2881887D24F3C2B500999481 /* YYVPNManager.swift */,
 				2881888324F3CD1100999481 /* YYVPNManager.Config.swift */,
+				2860C44124FC9E570059B261 /* YYVPNManager.Notification.swift */,
 				2881888724F4FC2D00999481 /* YYVPNManager.Extension.swift */,
+				2860C43F24FC9D470059B261 /* YYDarwinNotificationManager.h */,
+				2860C43E24FC9D470059B261 /* YYDarwinNotificationManager.m */,
 			);
 			path = YYVPNLib;
 			sourceTree = "<group>";
@@ -222,6 +245,7 @@
 				2881885524F36B0A00999481 /* PacketTunnelProvider.swift */,
 				2881885724F36B0A00999481 /* Info.plist */,
 				2881885824F36B0A00999481 /* Tunnel.entitlements */,
+				2860C44324FCAA440059B261 /* Tunnel-Bridging-Header.h */,
 			);
 			path = Tunnel;
 			sourceTree = "<group>";
@@ -272,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				288188EB24F65F6C00999481 /* YYAlertButton.swift */,
+				2860C44B24FCC8A40059B261 /* YYListView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -280,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				288188ED24F6633D00999481 /* ConfigView */,
+				2860C45224FCC9000059B261 /* PacketView */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -393,6 +419,7 @@
 				TargetAttributes = {
 					2881882F24F36A4B00999481 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 					2881884724F36AAC00999481 = {
 						CreatedOnToolsVersion = 11.6;
@@ -400,6 +427,7 @@
 					};
 					2881885224F36B0900999481 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 					2881886324F36B2400999481 = {
 						CreatedOnToolsVersion = 11.6;
@@ -464,8 +492,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2881888024F3C54000999481 /* ConfigView.swift in Sources */,
+				2860C44A24FCC7EB0059B261 /* PacketView.swift in Sources */,
 				2881888224F3CAA800999481 /* ConfigViewModel.swift in Sources */,
 				28C8601C24F7AA42000EC2B6 /* View+YYLib.swift in Sources */,
+				2860C44C24FCC8A40059B261 /* YYListView.swift in Sources */,
 				288188EC24F65F6C00999481 /* YYAlertButton.swift in Sources */,
 				2881883324F36A4B00999481 /* AppDelegate.swift in Sources */,
 				2881883524F36A4B00999481 /* SceneDelegate.swift in Sources */,
@@ -477,6 +507,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2881887E24F3C2B500999481 /* YYVPNManager.swift in Sources */,
+				2860C44024FC9D470059B261 /* YYDarwinNotificationManager.m in Sources */,
+				2860C44224FC9E570059B261 /* YYVPNManager.Notification.swift in Sources */,
 				2881888824F4FC2D00999481 /* YYVPNManager.Extension.swift in Sources */,
 				2881888424F3CD1100999481 /* YYVPNManager.Config.swift in Sources */,
 			);
@@ -662,6 +694,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Client/Client.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Client/Preview Content\"";
@@ -675,6 +708,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yy.Client;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Client/Client-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -685,6 +720,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Client/Client.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Client/Preview Content\"";
@@ -698,6 +734,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yy.Client;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Client/Client-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -749,6 +786,7 @@
 		2881885D24F36B0A00999481 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Tunnel/Tunnel.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5PK7JV6E62;
@@ -762,6 +800,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yy.Client.Tunnel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Tunnel/Tunnel-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -770,6 +810,7 @@
 		2881885E24F36B0A00999481 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Tunnel/Tunnel.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5PK7JV6E62;
@@ -783,6 +824,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yy.Client.Tunnel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Tunnel/Tunnel-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

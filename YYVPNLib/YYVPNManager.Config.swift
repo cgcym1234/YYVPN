@@ -11,8 +11,6 @@ import NetworkExtension
 import os.log
 
 public extension YYVPNManager {
-    static let didChangeStatusNotification = "YYVPNManager.didChangeStatusNotification"
-    
     enum Status: String {
         case on
         case off

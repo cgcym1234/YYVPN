@@ -15,6 +15,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
     private var config: YYVPNManager.Config!
     private var udpSession: NWUDPSession!
     private var observer: AnyObject?
+    private lazy var dataStorage = UserDefaults(suiteName: YYVPNManager.groupID)!
     
     /// 启动网络隧道，当主App调用startVPNTunnel()后执行；
     /// 最后通过调用completionHandler(nil or error)，完成建立隧道或由于错误而无法启动隧道。
@@ -115,6 +116,8 @@ private extension PacketTunnelProvider {
         udpSession.setReadHandler({ [weak self] packets, _ in
             if let packets = packets {
                 packets.forEach {
+                    self?.dataStorage.receivePackets = ($0 as NSData).description
+                    YYDarwinNotificationManager.sharedInstance().postNotification(forName: YYVPNManager.didReceivePacketsNotification)
                     self?.packetFlow.writePackets([$0], withProtocols: [AF_INET as NSNumber])
                 }
             }
@@ -123,17 +126,19 @@ private extension PacketTunnelProvider {
     
     func localPacketsToServer() {
         os_log(.default, log: .default, "LocalPacketsToServer")
-        packetFlow.readPackets { packets, _ in
+        packetFlow.readPackets { [weak self] packets, _ in
             os_log(.default, log: .default, "readPackets")
             packets.forEach {
-                self.udpSession.writeDatagram($0) { error in
+                self?.dataStorage.readPackets = ($0 as NSData).description
+                YYDarwinNotificationManager.sharedInstance().postNotification(forName: YYVPNManager.didReadPacketsNotification)
+                self?.udpSession.writeDatagram($0) { error in
                     if let error = error {
                         os_log(.default, log: .default, "udpSession.writeDatagram error: %{public}@", "\(error)")
                     }
                 }
             }
             
-            self.localPacketsToServer()
+            self?.localPacketsToServer()
         }
     }
 }
