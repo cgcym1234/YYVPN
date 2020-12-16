@@ -79,6 +79,7 @@ private extension PacketTunnelProvider {
     func udpSession(_ session: NWUDPSession, didUpdateState state: NWUDPSessionState) {
         switch state {
         case .ready:
+            os_log(.default, log: .default, "Connet UDP Server successed!!")
             setupTunnelNetworkSettings()
             localPacketsToServer()
         case .failed:
@@ -92,15 +93,23 @@ private extension PacketTunnelProvider {
     
     /// 给虚拟网卡配置虚拟IP，DNS设置，代理设置，隧道MTU和IP路由
     func setupTunnelNetworkSettings() {
-        let ip = "192.168.0.2"
+        let ip = "10.8.0.2"
         let subnet = "255.255.255.0"
+        let dns = "8.8.8.8,8.4.4.4"
         
         let settings = NEPacketTunnelNetworkSettings(tunnelRemoteAddress: config.hostname)
+        settings.mtu = 1400
+        
         /// 分配给TUN接口的IPv4地址和网络掩码
         let ipv4Settings = NEIPv4Settings(addresses: [ip], subnetMasks: [subnet])
         /// 指定哪些IPv4网络流量的路由将被路由到TUN接口
         ipv4Settings.includedRoutes = [NEIPv4Route.default()]
         settings.ipv4Settings = ipv4Settings
+        
+        let dnsSettings = NEDNSSettings(servers: dns.components(separatedBy: ","))
+        /// overrides system DNS settings
+        dnsSettings.matchDomains = [""]
+        settings.dnsSettings = dnsSettings
         
         setTunnelNetworkSettings(settings) { [weak self] error in
             self?.pendingCompletion?(error)

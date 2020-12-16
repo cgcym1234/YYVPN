@@ -24,7 +24,7 @@
 #include <arpa/inet.h>
 #include <pthread/pthread.h>
 
-#define BUFF_LEN 1024
+#define BUFF_LEN 1500
 
 void udp_msg_sender(int fd, struct sockaddr *dst) {
     char buf[BUFF_LEN];

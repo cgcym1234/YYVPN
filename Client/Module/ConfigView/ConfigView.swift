@@ -11,7 +11,7 @@ import SwiftUI
 struct ConfigView: View {
     
     @ObservedObject var viewModel =
-        ConfigViewModel(config: .init(hostname: "172.20.49.36", port: "8899"))
+        ConfigViewModel(config: .init(hostname: "121.4.91.20", port: "54345"))
 
     var body: some View {
         NavigationView {

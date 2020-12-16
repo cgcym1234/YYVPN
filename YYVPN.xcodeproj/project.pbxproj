@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1DD6E82581C2A4007EC948 /* YYServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C8603824F8F994000EC2B6 /* YYServer.m */; };
 		2860C44024FC9D470059B261 /* YYDarwinNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2860C43E24FC9D470059B261 /* YYDarwinNotificationManager.m */; };
 		2860C44224FC9E570059B261 /* YYVPNManager.Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2860C44124FC9E570059B261 /* YYVPNManager.Notification.swift */; };
 		2860C44A24FCC7EB0059B261 /* PacketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2860C44924FCC7EB0059B261 /* PacketView.swift */; };
@@ -36,7 +37,6 @@
 		28C8601C24F7AA42000EC2B6 /* View+YYLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C8601B24F7AA42000EC2B6 /* View+YYLib.swift */; };
 		28C8603A24F8F994000EC2B6 /* udp_server.c in Sources */ = {isa = PBXBuildFile; fileRef = 28C8603624F8F994000EC2B6 /* udp_server.c */; };
 		28C8603B24F8F994000EC2B6 /* udp_client.c in Sources */ = {isa = PBXBuildFile; fileRef = 28C8603724F8F994000EC2B6 /* udp_client.c */; };
-		28C8603C24F8F994000EC2B6 /* YYServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C8603824F8F994000EC2B6 /* YYServer.m */; };
 		28C8603E24F8F9FD000EC2B6 /* YYListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C8603D24F8F9FD000EC2B6 /* YYListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +88,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A21EB302580AB0F006DBFBD /* if_tun.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = if_tun.h; sourceTree = "<group>"; };
+		0A21EB312580AB0F006DBFBD /* if.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = if.h; sourceTree = "<group>"; };
+		0A7E79E3258097470034F287 /* vpn_server.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vpn_server.c; sourceTree = "<group>"; };
 		2860C43E24FC9D470059B261 /* YYDarwinNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDarwinNotificationManager.m; sourceTree = "<group>"; };
 		2860C43F24FC9D470059B261 /* YYDarwinNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDarwinNotificationManager.h; sourceTree = "<group>"; };
 		2860C44124FC9E570059B261 /* YYVPNManager.Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYVPNManager.Notification.swift; sourceTree = "<group>"; };
@@ -170,6 +173,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A21EB322580AB25006DBFBD /* linux */ = {
+			isa = PBXGroup;
+			children = (
+				0A21EB302580AB0F006DBFBD /* if_tun.h */,
+				0A21EB312580AB0F006DBFBD /* if.h */,
+			);
+			path = linux;
+			sourceTree = "<group>";
+		};
 		2860C45224FCC9000059B261 /* PacketView */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +338,8 @@
 				28C8603524F8F994000EC2B6 /* udp_client.h */,
 				28C8603624F8F994000EC2B6 /* udp_server.c */,
 				28C8603924F8F994000EC2B6 /* udp_server.h */,
+				0A7E79E3258097470034F287 /* vpn_server.c */,
+				0A21EB322580AB25006DBFBD /* linux */,
 				28C8603424F8F994000EC2B6 /* YYServer.h */,
 				28C8603824F8F994000EC2B6 /* YYServer.m */,
 			);
@@ -529,9 +543,9 @@
 				28C8603B24F8F994000EC2B6 /* udp_client.c in Sources */,
 				28C8603A24F8F994000EC2B6 /* udp_server.c in Sources */,
 				2881886924F36B2400999481 /* ContentView.swift in Sources */,
+				0A1DD6E82581C2A4007EC948 /* YYServer.m in Sources */,
 				2881886724F36B2400999481 /* AppDelegate.swift in Sources */,
 				28C8603E24F8F9FD000EC2B6 /* YYListView.swift in Sources */,
-				28C8603C24F8F994000EC2B6 /* YYServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -847,6 +861,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Server",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yy.Server;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -873,6 +891,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Server",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yy.Server;

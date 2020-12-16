@@ -24,6 +24,8 @@
 #include <pthread/pthread.h>
 #include <net/if.h>
 
+#include <pcap.h>
+
 #define BUFF_LEN 1500
 
 data_handler_t datahandler;
