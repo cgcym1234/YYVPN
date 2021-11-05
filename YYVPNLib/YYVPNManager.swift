@@ -10,9 +10,9 @@ import Foundation
 import NetworkExtension
 
 extension YYVPNManager {
-    public static var groupID = "group.com.yy.Client"
-    public static var bundleID = "com.yy.Client"
-    public static var bundleIDTunnel = "com.yy.Client.Tunnel"
+    public static var bundleID = "com.yy.Client112-"
+    public static var bundleIDTunnel = "\(bundleID).Tunnel"
+    public static var groupID = "group.\(bundleID)"
 }
 
 public final class YYVPNManager {
