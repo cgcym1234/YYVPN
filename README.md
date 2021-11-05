@@ -2,9 +2,9 @@
 
 ## 环境
 
-- Xcode 11.6
-- iOS 13
-- MacOS 10.15
+- Xcode 12.5
+- iOS 15.0.2
+- macOS Big Sur 11.6
 
 ## 导航
 
@@ -38,13 +38,13 @@
 
 Client:
 
-![](http://120.79.102.161/Blogs/note/Blog/MyPic/vpn/client.png)
+![](https://raw.githubusercontent.com/cgcym1234/pic/main/vpn/client.png)
 
 
 
 Server:
 
-![](http://120.79.102.161/Blogs/note/Blog/MyPic/vpn/server.jpg)
+![](https://raw.githubusercontent.com/cgcym1234/pic/main/vpn/server.jpg)
 
 先来看看，要实现上面流程需要用到哪些技术。
 
